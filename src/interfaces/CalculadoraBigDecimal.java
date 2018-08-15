@@ -8,6 +8,6 @@ import java.math.BigDecimal;
  */
 public interface CalculadoraBigDecimal {
 	
-	public BigDecimal calular(BigDecimal x, BigDecimal y);
+	public BigDecimal calcular(BigDecimal x, BigDecimal y);
 
 }

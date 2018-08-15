@@ -6,6 +6,6 @@ package interfaces;
  */
 public interface CalculadoraDouble {
 	
-	public Double calular(double x, double y);
+	public Double calcular(double x, double y);
 
 }

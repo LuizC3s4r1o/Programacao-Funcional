@@ -21,7 +21,7 @@ public class LambdaComDevolucao {
 	
 	private static void engine(Calculadora cal) {
 		int x = 10,  y = 3;
-		int resultado = cal.calular(x, y);
+		int resultado = cal.calcular(x, y);
 		System.out.println("Resultado: "+resultado);
 	}
 

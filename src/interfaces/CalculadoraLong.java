@@ -6,6 +6,6 @@ package interfaces;
  */
 public interface CalculadoraLong {
 	
-	public Long calular(Long x, Long y);
+	public Long calcular(Long x, Long y);
 
 }
