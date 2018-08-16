@@ -2,9 +2,6 @@ package main;
 import java.math.BigDecimal;
 
 import interfaces.CalculadoraBigDecimal;
-import interfaces.CalculadoraDouble;
-import interfaces.CalculadoraInt;
-import interfaces.CalculadoraLong;
 
 /**
  * 

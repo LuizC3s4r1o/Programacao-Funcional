@@ -13,7 +13,7 @@ import interfaces.CalculadoraLong;
 public class LambdaComAmbiguidade {
 
 	public static void main(String[] args) {
-	
+		
 		//formas de invocar o método contornando a ambiguidade (casting ou declaração)
 		engine((Long x,Long y) -> x + y);
 		engine((CalculadoraInt)(x,y) -> x - y);
