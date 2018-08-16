@@ -48,9 +48,7 @@ public class DadosRestaurantes {
 		List<Object> listarDados = new ArrayList<>();
 		
 		//Interacao com a lista recebida
-		for (Restaurante restaurante : listaRes) {
-			listarDados.add(func.apply(restaurante));
-		}
+		listaRes.forEach(x -> listarDados.add(func.apply(x)));
 
 		return listarDados;
 
