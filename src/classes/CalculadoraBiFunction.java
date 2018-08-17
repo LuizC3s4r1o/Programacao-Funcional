@@ -1,5 +1,11 @@
 package classes;
 
+/**
+ * 
+ * @author Luiz.Cesario
+ *
+ */
+
 import java.util.function.BiFunction;
 
 public class CalculadoraBiFunction {
