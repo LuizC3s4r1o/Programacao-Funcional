@@ -24,5 +24,18 @@ public class AnalisePredicate {
 		
 		return listaFuncLocal;
 	}
+	
+	public List<Funcionario> avaliarContrario(List<Funcionario> listFunc, Predicate<Funcionario> predFunc){
+		
+		List<Funcionario> listaFuncLocal = new ArrayList<>();
+		listFunc.forEach(x -> {
+			// o negate é o inevrso do determinado em predFunc
+			if (predFunc.negate().test(x)) {
+				listaFuncLocal.add(x);
+			}
+		});
+		
+		return listaFuncLocal;
+	}
 
 }
