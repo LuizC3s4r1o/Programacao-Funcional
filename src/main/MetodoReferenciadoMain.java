@@ -3,6 +3,8 @@ package main;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import classes.ServirComparacoes;
 import entities.Paciente;
 
 /**
@@ -34,27 +36,34 @@ public class MetodoReferenciadoMain {
 		
 		// chamada direta de ordenacao
 		Collections.sort(pacientes, (p1,p2) -> p1.getIdade().compareTo(p2.getIdade()));
-		
 		System.out.println("\nPessoas com ordenação -----------------------------\n");
 		pacientes.forEach(p -> System.out.println(p));
 		
 		// referenciando ao método static compararPorIdade da entidade Paciente
 		Collections.sort(pacientes, (p1,p2) -> Paciente.compararPorIdade(p1, p2));
-		
 		System.out.println("\nReferenciando ao método da entidade Paciente -----------------------------\n");
 		pacientes.forEach(p -> System.out.println(p));
 		
 		// referenciando ao método static compararPorIdade da entidade Paciente usando duas vezes o operados dois pontos
 		Collections.sort(pacientes, Paciente::compararPorIdade);
-		
 		System.out.println("\nReferenciando ao método da entidade Paciente usando duas vezes o operados dois pontos\n");
 		pacientes.forEach(p -> System.out.println(p));
 		
 		// revertendo a lista
 		Collections.reverse(pacientes);
-		
 		System.out.println("\nRevertendo a lista Paciente -----------------------------\n");
 		pacientes.forEach(p -> System.out.println(p));
+
+		// Referencia por metodo de uma instância de objeto
+		ServirComparacoes servirComparacoes = new ServirComparacoes();
+
+		System.out.println("\nReferencia por metodo de uma instância de objeto -----------------------------\n");
+		Collections.sort(pacientes, (p1, p2) -> servirComparacoes.compararPorNome(p1, p2));
+		pacientes.forEach(p -> System.out.println(p));
+		
+		System.out.println("\nReferencia por metodo de uma instância de objeto 2----------------------------\n");
+		Collections.sort(pacientes, servirComparacoes::compararPorIdade);
+		pacientes.forEach(System.out::println);
 		
 	}
 
