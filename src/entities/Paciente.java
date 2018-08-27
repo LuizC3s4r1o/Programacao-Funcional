@@ -51,5 +51,9 @@ public class Paciente {
 		return p1.getIdade().compareTo(p2.getIdade());
 	}
 	
+	public int compararPorIdade2(Paciente p) {
+		return this.getIdade().compareTo(p.getIdade());
+	}
+	
 
 }

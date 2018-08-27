@@ -65,6 +65,15 @@ public class MetodoReferenciadoMain {
 		Collections.sort(pacientes, servirComparacoes::compararPorIdade);
 		pacientes.forEach(System.out::println);
 		
+		// Referencia por metodo de uma instância de objeto arbitrario de um tipo particular
+		System.out.println("\nReferencia por metodo de uma instância de objeto arbitrario de um tipo particular\n");
+		Collections.sort(pacientes, (p1, p2) -> p1.compararPorIdade2(p2));
+		pacientes.forEach(System.out::println);
+		
+		System.out.println("\nReferencia por metodo de uma instância de objeto arbitrario de um tipo particular 2\n");
+		Collections.sort(pacientes, Paciente::compararPorIdade2);
+		pacientes.forEach(System.out::println);
+		
 	}
 
 }
