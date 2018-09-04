@@ -1,0 +1,15 @@
+Entender o conceito de big data ajudar� a compreender melhor qual e o papel desempenhado por ferramentas como o Hadoop. 
+Ao longo do tempo, sera mais comum o surgimento deste tipo de desafio em empresas que desejam explorar seu big data. Assim, 
+neste artigo, desvendaremos de maneira pratica, com o objetivo de buscar o entendimento, de que forma podemos processar e 
+explorar um grande conjunto de dados atraves do uso do MapReduce e ferramentas Java (Hadoop). Isto nos possibilita construir 
+aplicacoes big data em Java.
+Com o constante crescimento e facilidade de acesso a tecnologia, cada vez mais e mais volumes de dados sao produzidos. 
+Diariamente, sao gerados petabytes de informacoes envolvendo operacoes comerciais e financeiras, e mesmo no ambiente 
+domestico e comum encontrar usuarios que possuem discos de backup com capacidade de 1 terabyte ou mais.
+E com este crescente acesso e tecnologia, empresas como Facebook, Yahoo! e Google culminaram coletando dados em uma escala 
+sem precedentes, numeros alem do comum. Eles foram os primeiros a coletar toneladas de dados oriundos de milhoes de usuarios. 
+Arduamente, perceberam que os sistemas convencionais de armazenamento e processamento de dados nao atenderiam a suas demandas. 
+Deste modo, nos anos 2000, colocando seus melhores pensadores para criar, foram capazes de desenvolver novas tecnicas como 
+MapReduce, BigTable e o Google File System, para lidar com tais volumes e processamento. Assim, apos um periodo utilizando 
+estas tecnologias de forma privada, por volta do ano 2005, Facebook, Yahoo! e Google tomaram a iniciativa de compartilha-las 
+atraves da publicacao de white papers, descrevendo suas tecnologias para soluoees que requerem o manuseio de big data.
