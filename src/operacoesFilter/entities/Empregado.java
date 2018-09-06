@@ -8,11 +8,12 @@ import java.util.List;
  * @author Luiz.Cesario
  *
  */
-public class Empregado {
+@SuppressWarnings("rawtypes")
+public class Empregado implements Comparable{
 	
 	private long id;
 	private String nome;
-	private double ingressos;
+	private double salario;
 	private int idade;
 	private Genero genero;
 
@@ -33,14 +34,14 @@ public class Empregado {
 		this.nome = nome;
 	}
 
-	public double getIngressos() {
-		return ingressos;
+	public double getSalario() {
+		return salario;
 	}
 
-	public void setIngressos(double ingressos) {
-		this.ingressos = ingressos;
+	public void setSalario(double salario) {
+		this.salario = salario;
 	}
-	
+
 	public int getIdade() {
 		return idade;
 	}
@@ -62,10 +63,10 @@ public class Empregado {
 	}
 
 
-	public Empregado(long id, String nome, double ingressos, Genero genero, int idade) {
+	public Empregado(long id, String nome, double salario, Genero genero, int idade) {
 		this.id = id;
 		this.nome = nome;
-		this.ingressos = ingressos;
+		this.salario = salario;
 		this.genero = genero;
 		this.idade = idade;
 	}
@@ -97,7 +98,7 @@ public class Empregado {
 				Empregado emp16 = new Empregado(1, "Monica Alves", 458.88, Genero.MULHER, 33);
 				Empregado emp17 = new Empregado(1, "Andre Mafre", 302.85, Genero.HOMEM, 28);
 				Empregado emp18 = new Empregado(1, "Roseli Souza", 336.68, Genero.MULHER, 39);
-				Empregado emp19 = new Empregado(1, "Gabriela Montevideo", 489.89, Genero.MULHER, 29);
+				Empregado emp19 = new Empregado(1, "Gabriela Monte", 489.89, Genero.MULHER, 29);
 				Empregado emp20 = new Empregado(1, "Marcio Martinelli", 299.68, Genero.HOMEM, 18);
 				Empregado emp21 = new Empregado(1, "Monica Sanches", 574.17, Genero.MULHER, 25);
 				Empregado emp22 = new Empregado(1, "Luiz Ferrari", 691.15, Genero.HOMEM, 32);
@@ -119,6 +120,11 @@ public class Empregado {
 						emp11,emp12,emp13,emp14,emp15,emp16,emp17,emp18,emp19,emp20,emp21,emp22,
 						emp23,emp24,emp25,emp26,emp27,emp28,emp29,emp30,emp31,emp32,emp33,emp34);
 				
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		return this.getNome().compareTo(((Empregado)o).getNome());
 	}
 	
 
